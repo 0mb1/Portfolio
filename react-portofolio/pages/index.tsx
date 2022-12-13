@@ -35,18 +35,20 @@ export default function Home() {
             <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
                 <section className="min-h-screen">
                     <nav className="py-10 mb-12 flex justify-between">
-                        <h1 className="text-xl font-burtons">developedbymb</h1>
+                        <h1 className="text-xl font-burtons text-teal-600">
+                            Kirill Kuts
+                        </h1>
                         <ul className="flex items-center">
                             <li>
                                 <BsFillMoonStarsFill
                                     onClick={() => setDarkMode(!darkMode)}
-                                    className="cursor-pointer text-2xl"
+                                    className="cursor-pointer text-2xl dark:text-teal-600"
                                 />
                             </li>
                             <li>
                                 <a
                                     className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rouded-md ml-8"
-                                    href="#"
+                                    href="https://drive.google.com/drive/folders/1aU06ihP4AcnbVAQOAlId4e_CbvDnOt-a?usp=sharing"
                                 >
                                     Resume
                                 </a>
@@ -55,16 +57,24 @@ export default function Home() {
                     </nav>
                     <div className="text-center p-10 py-10">
                         <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-                            Kirill Kuts
+                            about me
                         </h2>
-                        <h3 className="text 2xl py-2 md:text-3xl">Developer</h3>
+                        <h3 className="text 2xl py-2 md:text-3xl dark:text-gray-500">
+                            Developer
+                        </h3>
                         <p className="text-md py-5 leading-8 text-gray-600 md:text-xl max-w-lg mx-auto">
                             about to become a proper web developer
                         </p>
                     </div>
                     <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-                        <AiFillGithub />
-                        <AiFillLinkedin />
+                        <a href="https://github.com/0mb1">
+                            {" "}
+                            <AiFillGithub />
+                        </a>
+                        <a href="https://www.linkedin.com/in/kirill-kuts-978853259/">
+                            {" "}
+                            <AiFillLinkedin />
+                        </a>
                         <AiFillTwitterCircle />
                     </div>
                     <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
@@ -77,31 +87,35 @@ export default function Home() {
                         <p className="text-md py-2 leading-8 text-gray-600">
                             Since the begining of my jorney as a developer, I
                             have finished a bootcamp at{" "}
-                            <span className="text-teal-500">spicedAcademy</span>
+                            <span className="text-teal-500">
+                                spicedAcademy{" "}
+                            </span>
                             and now looking for new challegenges as a web
                             developer or full stack
                         </p>
                     </div>
                     <div className="lg:flex gap-10 ">
-                        <div className="textcenter shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+                        <div className="textcenter shadow-lg p-10 rounded-xl my-10 dark:bg-teal-400">
                             <Image src={design} width={100} height={100} />
                             <h3 className="text-lg font-medium pt-8 pb-2">
                                 Beatutiful Designs
                             </h3>
                             <p></p>
                         </div>
-                        <div className="textcenter shadow-lg p-10 rounded-xl my-10">
+                        <div className="textcenter shadow-lg p-10 rounded-xl my-10  dark:bg-teal-400">
                             <Image src={code} width={100} height={100} />
                             <h3 className="text-lg font-medium pt-8 pb-2">
-                                Beatutiful Designs
+                                Coding skills
                             </h3>
-                            <p></p>
+                            <p className="flex items-center ">JavaScript</p>
                         </div>
                     </div>
                 </section>
                 <section>
                     <div>
-                        <h3 className="text-3xl py-1">Portfolio</h3>
+                        <h3 className="text-3xl py-1 dark:text-teal-400">
+                            Portfolio
+                        </h3>
                     </div>
                     <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
                         <div className="basis-1/3 flex-1">
