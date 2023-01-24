@@ -1,10 +1,6 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import {
-    AiFillGithub,
-    AiFillLinkedin,
-    AiFillTwitterCircle,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
 
 import Image from "next/image";
 import deved from "../public/dev-ed-wave.png";
@@ -32,10 +28,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+            <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 select-none ">
                 <section className="min-h-screen">
                     <nav className="py-10 mb-12 flex justify-between">
-                        <h1 className="text-xl font-burtons text-teal-600">
+                        <h1 className="text-2xl font-burtons text-teal-600 md:text-3xl ">
                             Kirill Kuts
                         </h1>
                         <ul className="flex items-center">
@@ -47,8 +43,9 @@ export default function Home() {
                             </li>
                             <li>
                                 <a
-                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rouded-md ml-8"
+                                    className="bg-gradient-to-r from-cyan-500 to-teal-500 bg-cyan-500 text-white px-4 py-2 rouded-md ml-8 select-none hover:animate-ping"
                                     href="https://drive.google.com/drive/folders/1aU06ihP4AcnbVAQOAlId4e_CbvDnOt-a?usp=sharing"
+                                    target="blank"
                                 >
                                     Resume
                                 </a>
@@ -56,7 +53,7 @@ export default function Home() {
                         </ul>
                     </nav>
                     <div className="text-center p-10 py-10">
-                        <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+                        <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl ">
                             about me
                         </h2>
                         <h3 className="text 2xl py-2 md:text-3xl dark:text-gray-500">
@@ -67,15 +64,24 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-                        <a href="https://github.com/0mb1">
+                        <a href="https://github.com/0mb1" target="blank">
                             {" "}
                             <AiFillGithub />
                         </a>
-                        <a href="https://www.linkedin.com/in/kirill-kuts-978853259/">
+                        <a
+                            href="https://www.linkedin.com/in/kirill-kuts-978853259/"
+                            target="blank"
+                        >
                             {" "}
                             <AiFillLinkedin />
                         </a>
-                        <AiFillTwitterCircle />
+                        <a
+                            href="https://www.facebook.com/profile.php?id=100005594820600"
+                            target="blank"
+                        >
+                            {" "}
+                            <AiFillFacebook />
+                        </a>
                     </div>
                     <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
                         <Image src={deved} layout="fill" objectFit="cover" />
@@ -83,12 +89,19 @@ export default function Home() {
                 </section>
                 <section>
                     <div>
-                        <h3 className="text-3xl py-1">Services I offer</h3>
+                        <h3 className="text-3xl py-1 dark:text-teal-400">
+                            Services I offer
+                        </h3>
                         <p className="text-md py-2 leading-8 text-gray-600">
                             Since the begining of my jorney as a developer, I
                             have finished a bootcamp at{" "}
                             <span className="text-teal-500">
-                                spicedAcademy{" "}
+                                <a
+                                    href="https://www.spiced-academy.com/en/program?utm_source=GoogleAds&utm_medium=cpc&utm_id=1702155010&utm_term=66119203123&gclid=Cj0KCQiA4uCcBhDdARIsAH5jyUmHywo5TbX7wDCckTd9jcQdoav7fN4ajvm5WIo1I0EVRvhhwVHKntEaAociEALw_wcB"
+                                    target="blank"
+                                >
+                                    spicedAcademy{" "}
+                                </a>
                             </span>
                             and now looking for new challegenges as a web
                             developer or full stack
@@ -96,18 +109,29 @@ export default function Home() {
                     </div>
                     <div className="lg:flex gap-10 ">
                         <div className="textcenter shadow-lg p-10 rounded-xl my-10 dark:bg-teal-400">
-                            <Image src={design} width={100} height={100} />
+                            <Image src={consulting} width={100} height={100} />
                             <h3 className="text-lg font-medium pt-8 pb-2">
-                                Beatutiful Designs
+                                Soft skills
                             </h3>
-                            <p></p>
+                            <div>
+                                <p>
+                                    Communication, Teamwork, Curiosity,
+                                    Adaptability, Patience
+                                </p>
+                            </div>
                         </div>
                         <div className="textcenter shadow-lg p-10 rounded-xl my-10  dark:bg-teal-400">
                             <Image src={code} width={100} height={100} />
                             <h3 className="text-lg font-medium pt-8 pb-2">
                                 Coding skills
                             </h3>
-                            <p className="flex items-center ">JavaScript</p>
+                            <div className="flex items-center gap-1">
+                                <p className="flex items-center ">
+                                    Web development, Database and SQL, Git
+                                    version contol, OOP - JavaScript
+                                </p>
+                                з
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -117,17 +141,17 @@ export default function Home() {
                             Portfolio
                         </h3>
                     </div>
-                    <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-                        <div className="basis-1/3 flex-1">
+                    <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap ">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web1}
-                                className="rounded-lg object-cover"
+                                className="rounded-lg object-cover "
                                 width={"100%"}
                                 height={"100%"}
                                 layout="responsive"
                             />
                         </div>
-                        <div className="basis-1/3 flex-1">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web2}
                                 className="rounded-lg object-cover"
@@ -136,7 +160,7 @@ export default function Home() {
                                 layout="responsive"
                             />
                         </div>
-                        <div className="basis-1/3 flex-1">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web3}
                                 className="rounded-lg object-cover"
@@ -145,7 +169,7 @@ export default function Home() {
                                 layout="responsive"
                             />
                         </div>
-                        <div className="basis-1/3 flex-1">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web4}
                                 className="rounded-lg object-cover"
@@ -154,7 +178,7 @@ export default function Home() {
                                 layout="responsive"
                             />
                         </div>
-                        <div className="basis-1/3 flex-1">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web5}
                                 className="rounded-lg object-cover"
@@ -163,7 +187,7 @@ export default function Home() {
                                 layout="responsive"
                             />
                         </div>
-                        <div className="basis-1/3 flex-1">
+                        <div className="basis-1/3 flex-1 hover:animate-pulse">
                             <Image
                                 src={web6}
                                 className="rounded-lg object-cover"
