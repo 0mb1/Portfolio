@@ -7,6 +7,7 @@ import deved from "../public/dev-ed-wave.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
+import educ from "../public/educ.png";
 import web1 from "../public/web1.png";
 import web2 from "../public/web2.png";
 import web3 from "../public/web3.png";
@@ -130,7 +131,19 @@ export default function Home() {
                                     Web development, Database and SQL, Git
                                     version contol, OOP - JavaScript
                                 </p>
-                                з
+                            </div>
+                        </div>
+                        <div className="textcenter shadow-lg p-10 rounded-xl my-10  dark:bg-teal-400">
+                            <Image src={educ} width={100} height={100} />
+                            <h3 className="text-lg font-medium pt-8 pb-2">
+                                Education
+                            </h3>
+                            <div className="flex items-center gap-1">
+                                <p className="flex items-center ">
+                                    Bootcamp - Full Stack developer
+                                    <br /> Sumy State University - Information
+                                    Technology
+                                </p>
                             </div>
                         </div>
                     </div>
